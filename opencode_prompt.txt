@@ -1,0 +1,27 @@
+Create a commandline utility that accepts three input arugments, input directory path, optional flag indicating whether to search path recursively, output filename
+The utility finds all the PDF files in the input path and interates through them.
+Iterate through each PDF file and:
+- open the first PDF page
+- convert to an image
+- check whether the image looks like an engineering drawing
+- if not an engineering drawing continue to the next PDF file
+- if an engineering drawing, look in the bottom right corner and find a box in the title block that has the letters "REV"
+- extract the other characters from the box, but not "REV"
+- wrtie a line in the output file which has the PDF filename and characters found from the previous step, separated by a ","
+- print the same information to the terminal
+when all PDF files have been processed, save the output file and exit
+-----------
+In project folder is a directory called "examples".  It contains 4 example engineering drawing PDFs, 
+examples/engineering_drawing1.pdf
+examples/engineering_drawing2.pdf
+examples/engineering_drawing3.pdf
+examples/engineering_drawing4.pdf
+
+There is also a png version of each file with the "REV" box surrounded by a red box.
+
+The expected output file for the 4 examples engineering drawing is listed below
+---------
+examples/engineering_drawing1.pdf, 2
+examples/engineering_drawing2.pdf, B
+examples/engineering_drawing3.pdf, 2
+examples/engineering_drawing4.pdf, A

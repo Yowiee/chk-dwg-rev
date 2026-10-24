@@ -1,0 +1,22 @@
+[project]
+name = "chk-dwg-rev"
+version = "0.1.0"
+description = "Check drawing revisions"
+readme = "README.md"
+authors = [
+    { name = "Yowiee", email = "yowiee@email4me.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "opencv-python>=5.0.0.93",
+    "pymupdf>=2.0",
+    "rapidocr-onnxruntime>=1.4.4",
+]
+
+[project.scripts]
+chk-dwg-rev = "chk_dwg_rev:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
